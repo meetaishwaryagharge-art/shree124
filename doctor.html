@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shree Hospital-karad</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  :root {
+    --blue: #1e88e5;
+    --blue-dark: #1565c0;
+    --blue-light: #2196f3;
+    --blue-pale: #e3f2fd;
+    --text: #333;
+    --text-light: #666;
+    --white: #fff;
+     --orange: #ed6a24;
+    --green:#0e8b72;
+  }
+
+  body { 
+     font-family: 'Poppins', sans-serif; 
+    color: var(--text); 
+    font-size: 14px;
+     line-height: 1.6;
+     }
+  a {
+     text-decoration: none; 
+     color: inherit; 
+    }
+  img { 
+    max-width: 100%;
+     display: block; 
+    }
+
+  /* ---- NAVBAR ---- */
+  .topbar {
+     background: #0e8b72;
+      padding: 6px 0; 
+    }
+  .topbar .container { 
+    display: flex;
+     justify-content: space-between; 
+     align-items: center;
+     }
+  .topbar span {
+     color: rgba(255,255,255,0.85);
+      font-size: 12px;
+       margin-right: 15px; 
+      }
+  .topbar span i {
+     margin-right: 5px;
+     }
+  .topbar .top-right a {
+     color: rgba(255,255,255,0.85);
+      font-size: 12px; 
+      margin-left: 12px;
+     }
+.navbar {
+  width: 100%;
+  background: #fff;
+  padding: 12px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Container */
+.navbar .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+color: #1E9B85;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #1abc9c;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* Button */
+.nav-btn {
+   background: #F26B21;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+ background:#F7C65D;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+}
+/*doct banner*/
+   .banner-section {
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .banner-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #0e8b72);
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .banner-content h1 {
+            font-weight: 700;
+            font-size: 42px;
+        }
+
+        .breadcrumb-custom {
+            background: transparent;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        .breadcrumb-custom a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .breadcrumb-custom .breadcrumb-item + .breadcrumb-item::before {
+            color: #fff;
+        }
+
+        .settings-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #0d6efd;
+            width: 45px;
+            height: 45px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+        .settings-icon i {
+            color: #fff;
+            font-size: 20px;
+        }
+
+/*doct images*/
+body{
+            background:#f4f4f4;
+        }
+
+        .doctor-card{
+            background:#fff;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 4px 12px rgba(0,0,0,0.08);
+            transition:0.3s;
+            position:relative;
+        }
+
+        .doctor-card:hover{
+            transform:translateY(-5px);
+        }
+
+        .doctor-img{
+            position:relative;
+            overflow:hidden;
+        }
+
+        .doctor-img img{
+            width:100%;
+            height:320px;
+            object-fit:cover;
+            transition:0.4s;
+        }
+.doctor-img i{
+    color: #F26B21;
+}
+        .overlay{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(255,255,255,0.8);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            opacity:0;
+            transition:0.4s;
+        }
+
+        .doctor-card:hover .overlay{
+            opacity:1;
+        }
+
+        .overlay button{
+            background: #ed6a24;
+            color:#fff;
+            border:none;
+            padding:8px 18px;
+            border-radius:5px;
+            font-size:14px;
+        }
+
+        .doctor-info{
+            padding:20px;
+            text-align:center;
+        }
+
+        .doctor-info span{
+          font-family: 'Poppins', sans-serif;
+            font-size:13px;
+            color:#6c757d;
+        }
+.doctor-info i{
+    color: #F26B21;
+}
+        .doctor-info h5{
+          font-family: 'Poppins', sans-serif;
+            margin-top:6px;
+            font-weight:600;
+        }
+/*newsletter*/
+.newsletter {
+  background: #f3f6fb;
+  padding: 70px 0;
+}
+
+.newsletter-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Left Text */
+.newsletter-text h2 {
+ font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  color: #2c2c3a;
+  margin-bottom: 10px;
+}
+
+.newsletter-text p {
+ font-family: 'Poppins', sans-serif;
+  color: #6b6b7a;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+/* Form */
+.newsletter-form form {
+  display: flex;
+  gap: 15px;
+}
+
+.newsletter-form input {
+  padding: 16px 20px;
+  border-radius: 8px;
+  border: none;
+  width: 320px;
+  background: #fff;
+  font-size: 15px;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.newsletter-form button {
+  padding: 16px 35px;
+  border: none;
+  border-radius: 8px;
+  background:  #0e8b72;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(46,109,246,0.3);
+}
+
+.newsletter-form button:hover {
+  background: orange;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .newsletter-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter-form form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+}
+   /*footer*/
+
+.footer-section {
+    background: #0f1f2e;
+    color: #cfd8dc;
+    padding: 60px 0 0;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer-logo span {
+    color: #16c79a;
+}
+
+.footer-text {
+    margin: 20px 0;
+    line-height: 1.7;
+}
+
+.footer-title {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #cfd8dc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #16c79a;
+    padding-left: 5px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #1c2e3e;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #16c79a;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: #16c79a;
+    margin-top: 4px;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding: 20px 0;
+    background: #0c1a27;
+    font-size: 14px;
+}
+
+  /* Section backgrounds */
+  .bg-light { background: #f8fbff; }
+
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div>
+      <span><i class="fas fa-phone"></i> 02164 221 082</span>
+      <span><i class="fas fa-envelope"></i>centremanager@nayesha.com</span>
+      <span><i class="fas fa-map-marker-alt"></i>75QV+85H, 747,Rukmini Nagar, Karad</span>
+    </div>
+    <div class="top-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    
+    <!-- Logo Image -->
+    <div class="logo">
+      <img src="https://www.shreehospitalkarad.com/assets/img/Logo_Final_2.png" alt="MediPlus Logo">
+    </div>
+
+    <!-- Menu -->
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="servies.html">Services</a></li>
+    <li><a href="doctor.html">Doctors</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact-us.html">Contact</a></li>
+    </ul>
+
+    <!-- Button -->
+    <a href="#" class="nav-btn">Book Appointment</a>
+  </div>
+</nav>
+
+<!--banner-->
+<section class="banner-section">
+    <div class="banner-content">
+        <h1>Meet Our Qualified Doctors</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-custom">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active text-white">Doctors</li>
+            </ol>
+        </nav>
+    </div>
+
+    
+</section>
+
+<!--doctor images-->
+<section class="container py-5">
+    <div class="row g-4">
+
+        <!-- Doctor Card1 -->
+        <div class="col-md-4">
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="https://admin.shreehospitalkarad.com:9789/static/CommiteeImages/20230908138777.jpg" alt="">
+                    <div class="overlay">
+                        <a href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#doctorModal1">
+                View More
+              </a>
+                    </div>
+                </div>
+                <div class="doctor-info">
+                    <h5>Dr. Pramod Phatak</h5>
+                   <p><i class="fas fa-user-md"></i> MD ( Medicine )</p>
+                </div>
+            </div>
+        </div>
+<!-- Doctor Card2 -->
+        <div class="col-md-4">
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="https://admin.shreehospitalkarad.com:9789/static/CommiteeImages/20230908392587.jpg" alt="">
+                    <div class="overlay">
+                        <button>View More</button>
+                    </div>
+                </div>
+                <div class="doctor-info">
+                <h5>Dr. Ashok Chitale</h5>
+                <p><i class="fas fa-user-md"></i> MD ( Medicine )</p>
+                </div>
+            </div>
+        </div>
+<!-- Doctor Card3 -->
+        <div class="col-md-4">
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="https://admin.shreehospitalkarad.com:9789/static/CommiteeImages/20230908923360.jpg" alt="">
+                    <div class="overlay">
+                        <button>View More</button>
+                    </div>
+                </div>
+                <div class="doctor-info">
+                    <h5>Dr. Avinash Gargate</h5>
+                    <p><i class="fas fa-user-md"></i> MD ( Medicine )</p>
+                </div>
+            </div>
+        </div>
+<!-- Doctor Card4 -->
+        <div class="col-md-4">
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="https://admin.shreehospitalkarad.com:9789/static/CommiteeImages/20230908152468.jpg" alt="">
+                    <div class="overlay">
+                        <button>View More</button>
+                    </div>
+                </div>
+                <div class="doctor-info">
+                    <h5>Dr. Ajay Brahmnalkar</h5>
+                    <p><i class="fas fa-user-md"></i> MD ( Medicine )</p>
+                </div>
+            </div>
+        </div>
+<!-- Doctor Card5 -->
+        <div class="col-md-4">
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="https://admin.shreehospitalkarad.com:9789/static/CommiteeImages/20230906154681.jpg" alt="">
+                    <div class="overlay">
+                        <button>View More</button>
+                    </div>
+                </div>
+                <div class="doctor-info">
+                    <h5>Dr. Sanjay Kshirsagar</h5>
+                    <p><i class="fas fa-user-md"></i> MD ( Medicine )</p>
+                </div>
+            </div>
+        </div>
+<!-- Doctor Card6 -->
+        <div class="col-md-4">
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="https://admin.shreehospitalkarad.com:9789/static/CommiteeImages/20230908189552.jpg" alt="">
+                    <div class="overlay">
+                        <button>View More</button>
+                    </div>
+                </div>
+                <div class="doctor-info">
+                    <h5>Dr. Satish Joshi</h5>
+                    <p><i class="fas fa-user-md"></i> MD ( Medicine )</p>
+                </div>
+            </div>
+        </div>
+<!-- Doctor Card7 -->
+        <div class="col-md-4">
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="https://admin.shreehospitalkarad.com:9789/static/CommiteeImages/20230908587529.jpg" alt="">
+                    <div class="overlay">
+                        <button>View More</button>
+                    </div>
+                </div>
+                <div class="doctor-info">
+                    <h5>Dr. Prakash Sapre</h5>
+                    <p><i class="fas fa-user-md"></i> MBBS, LCPS</p>
+                </div>
+            </div>
+        </div>
+
+<!-- Doctor Card8 -->
+        <div class="col-md-4">
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="https://admin.shreehospitalkarad.com:9789/static/CommiteeImages/20230908138583.jpg" alt="">
+                    <div class="overlay">
+                        <button>View More</button>
+                    </div>
+                </div>
+                <div class="doctor-info">
+                    <h5>Dr. Kiran Salunkhe</h5>
+                    <p><i class="fas fa-user-md"></i>MD ( Medicine ), Bombay</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--popup-->
+<!--doc1-->
+<div class="modal fade" id="doctorModal1" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Dr. Pramod Phatak</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-5">
+            <img src="https://admin.shreehospitalkarad.com:9789/static/CommiteeImages/20230908138777.jpg" class="img-fluid rounded" alt="">
+          </div>
+          <div class="col-md-7">
+            <h6>MD (Medicine)</h6>
+            <p>Experienced physician with expertise in general medicine and patient-focused care.</p>
+            <ul>
+              <li>15+ Years Experience</li>
+              <li>Specialist in adult medicine</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!--newsletter-->
+<section class="newsletter">
+  <div class="newsletter-container">
+
+    <!-- Left Content -->
+    <div class="newsletter-text">
+      <h2>Stay Updated With Health Tips & Hospital Updates</h2>
+      <p>
+        Subscribe to receive health awareness updates, medical tips, and important announcements from Shree Hospital Karad.
+      </p>
+    </div>
+
+    <!-- Right Form -->
+    <div class="newsletter-form">
+      <form>
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+		
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row gy-4">
+
+            <!-- About Section -->
+            <div class="col-lg-4 col-md-6">
+                <h3 class="footer-logo">
+                    <span>Shree</span>Hospital
+                </h3>
+                <p class="footer-text">
+                      Shree Hospital Karad is committed to delivering quality healthcare services with compassion, advanced technology, and patient-centered treatment. Your health and safety are always our top priority.
+                </p>
+                </p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <h5 class="footer-title">Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="#">› Home</a></li>
+                    <li><a href="#">› About Us</a></li>
+                    <li><a href="#">› Services</a></li>
+                    <li><a href="#">› Doctors</a></li>
+                    <li><a href="#">› Blog</a></li>
+                    <li><a href="#">› Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-title">Our Services</h5>
+                <ul class="footer-links">
+                    <li><a href="#">› Laboratory Service</a></li>
+                    <li><a href="#">› Cardiology</a></li>
+                    <li><a href="#">› Neurology</a></li>
+                    <li><a href="#">› Orthopedics</a></li>
+                    <li><a href="#">› Pediatrics</a></li>
+                    <li><a href="#">› Eye Care</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-title">Contact Info</h5>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        75QV+85H, 747, Rukmini Nagar, Karad
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        02164 221 082
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        centremanager@nayesha.com
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        Open 24 hours
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom text-center">
+        © 2026 ShreeHospital. All Rights Reserved.
+    </div>
+</footer>
+</body>
+</html>
